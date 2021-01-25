@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/React/survey/static/css/main.ccb8f242.chunk.css",
+    "main.js": "/React/survey/static/js/main.85901de2.chunk.js",
+    "main.js.map": "/React/survey/static/js/main.85901de2.chunk.js.map",
+    "runtime-main.js": "/React/survey/static/js/runtime-main.7b65e3b8.js",
+    "runtime-main.js.map": "/React/survey/static/js/runtime-main.7b65e3b8.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/React/survey/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.5e0f59ab.chunk.js": "/React/survey/static/js/2.5e0f59ab.chunk.js",
+    "static/js/2.5e0f59ab.chunk.js.map": "/React/survey/static/js/2.5e0f59ab.chunk.js.map",
+    "static/js/3.963633f1.chunk.js": "/React/survey/static/js/3.963633f1.chunk.js",
+    "static/js/3.963633f1.chunk.js.map": "/React/survey/static/js/3.963633f1.chunk.js.map",
+    "index.html": "/React/survey/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/React/survey/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.ccb8f242.chunk.css.map": "/React/survey/static/css/main.ccb8f242.chunk.css.map",
+    "static/js/2.5e0f59ab.chunk.js.LICENSE.txt": "/React/survey/static/js/2.5e0f59ab.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b65e3b8.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.5e0f59ab.chunk.js",
+    "static/css/main.ccb8f242.chunk.css",
+    "static/js/main.85901de2.chunk.js"
+  ]
+}
