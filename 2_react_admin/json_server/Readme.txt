@@ -1,4 +1,4 @@
-Install after clone
+Install after clone ( node_modules folder )
 
 	$ npm i
 
@@ -16,7 +16,29 @@ In "package.json" add
 		"server": "json-server --watch db.json --port 3001 --middlewares ./range.js ./cors.js"
 	}
 
-Create db.json file 
+	===========================
+	|	To run server on the host add host to "package.json" params --host 88.888.888.88  
+	|	"script": {
+	|		"server": "json-server --host 88.888.888.88 --watch db.json --port 3001 --middlewares ./range.js ./cors.js"
+	|	}
+	|
+	|	Then run pm2 with command
+	|	$ pm2 start npm --name 'json_server' -- run server
+	===========================
+
+
+Create db.json file with certain colections (posts, users ....) 
+
+In db.json file create simple strucrute like this
+
+	{
+		"users": [
+			{	
+				"id": 1
+				"name": "Bob"
+			}
+		]
+	}
 
 Run server
 
@@ -26,6 +48,8 @@ Add middleware
 	- cors.js
 	- range.js
 
-In browser 
-
-	localhost:3001
+To see the data in the terminal 
+	
+	localhost:3001		  ---  to see server in the browser
+	localhost:3001/users  ---  to see completely data
+	localhost:3001/user/1 ---  to see user with id = 1
