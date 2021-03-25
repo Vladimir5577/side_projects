@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:80
+    tty: true
+    networks:
+      - laravel
+    volumes:
+      - ./:/var/www:delegated
+      - ./docker/nginx_default.conf:/etc/nginx/sites-enabled/default:delegated
+    depends_on:
+      - mysql
+  mysql:
+    image: 'mysql:8.0'
+    ports:
+      - '${FORWARD_DB_PORT:-3306}:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: secret
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - 'mysqlvolumenew:/var/lib/mysql'
+    networks:
+      - laravel
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping"]
+networks:
+  laravel:
+    driver: bridge
+volumes:
+  mysqlvolumenew:
+    driver: local
